@@ -1,11 +1,11 @@
 'use client'
 
+import Aboutme from '../components/Aboutme'
+
 export default function About() {
     return (
         <div>
-            <h1>
-                hello from about
-            </h1>
+            <Aboutme />
         </div>
     )
 }
