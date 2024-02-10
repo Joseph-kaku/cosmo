@@ -1,5 +1,7 @@
 'use client'
 
+
+
 export default function Gallery() {
     return (
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
