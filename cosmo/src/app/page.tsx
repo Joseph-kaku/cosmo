@@ -15,8 +15,5 @@ export default function Home() {
         <img src="https://flowbite.com/docs/images/carousel/carousel-5.svg" alt="..." />
       </Carousel>
     </div>
-
-
-  
   );
 }
