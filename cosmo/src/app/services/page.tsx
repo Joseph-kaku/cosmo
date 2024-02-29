@@ -1,11 +1,13 @@
 'use client'
 
+import ServicesLayout from "../components/ServicesLayout"
+
+
+
 export default function Services() {
     return (
-        <div>
-            <h1>
-                hello from services
-            </h1>
+        <div className="h-screen w-screen relative mt-20" >
+            <ServicesLayout />
         </div>
     )
 }
