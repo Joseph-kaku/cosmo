@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Nav from "./components/Nav";
 import "./globals.css";
 import { Footer } from "flowbite-react";
+import Foot from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
       <Nav />
         {children}      
-      <Footer />
+      {/* <Foot /> */}
       </body>
     </html>
   );

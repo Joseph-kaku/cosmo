@@ -7,7 +7,7 @@ export default function Picture({ pic }: { pic: string }) {
     return (
         <div className="relative w-screen h-screen overflow-hidden"> 
             <Image  src={pic} alt="..." layout="fill" objectFit="cover"/>
-            <div className="absolute top-10 ">
+            <div className="absolute top-64 left-96">
                 <p>test</p>
                 <Button>button</Button>
             </div>
