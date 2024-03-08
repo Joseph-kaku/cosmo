@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 
 'use client';
 
@@ -8,9 +9,8 @@ export default function ServicesLayout() {
     <Accordion collapseAll>
       <Accordion.Panel>
         <Accordion.Title>Hair Cut</Accordion.Title>
-        <Accordion.Content>
+        <Accordion.Content className="mb-2 text-gray-500 dark:text-gray-400">
           <div>
-          <p className="mb-2 text-gray-500 dark:text-gray-400">
           <h2>Women's Haircuts:</h2>
             <ul>
               <li>Layered Cut: A classic style that adds dimension and movement to your hair.</li>
@@ -27,14 +27,12 @@ export default function ServicesLayout() {
                 <li>Buzz Cut: A short, uniform length all over the head for a low-maintenance style.</li>
                 <li>Classic Cut: Timeless and versatile, suitable for various hair types and face shapes.</li>
               </ul>
-          </p>
           </div>
         </Accordion.Content>
       </Accordion.Panel>
       <Accordion.Panel>
         <Accordion.Title>Nails </Accordion.Title>
-        <Accordion.Content>
-          <p className="mb-2 text-gray-500 dark:text-gray-400">
+        <Accordion.Content className="mb-2 text-gray-500 dark:text-gray-400">
           <h2>Basic Services:</h2>
             <ul>
               <li>Manicure: Includes nail shaping, cuticle care, hand massage, and polish application.</li>
@@ -50,15 +48,24 @@ export default function ServicesLayout() {
                 <li>Dip Powder Manicure: Durable and chip-resistant manicure with a variety of colors and designs.</li>
                 <li>Nail Art (Per Nail): Custom nail designs, glitter, rhinestones, and more.</li>
               </ul>
-          </p>
         </Accordion.Content>
       </Accordion.Panel>
       <Accordion.Panel>
         <Accordion.Title>other</Accordion.Title>
-        <Accordion.Content>
-          <p className="mb-2 text-gray-500 dark:text-gray-400">
-           
-          </p>
+        <Accordion.Content className="mb-2 text-gray-500 dark:text-gray-400">
+          <div>
+          <h2>Other Services:</h2>
+            <ul>
+              <li>Makeup: Includes makeup application, powder, and eyeliner.</li>
+              <li>Massage: Includes hand massage, foot massage, and facial massage.</li>
+              <li>Manicure: Includes nail shaping, cuticle care, hand massage, and polish application.</li>
+              <li>Pedicure: Includes foot soak, nail shaping, cuticle care, callus removal, foot massage, and polish application.</li>
+              <li>Acrylic Full Set: Sculpted or tips applied to enhance nail length and strength.</li>
+              <li>Acrylic Fill: Maintenance for acrylic nails, includes shaping and polish.</li>
+              <li>Dip Powder Manicure: Durable and chip-resistant manicure with a variety of colors and designs.</li>
+              <li>Nail Art (Per Nail): Custom nail designs, glitter, rhinestones, and more.</li>
+            </ul>
+          </div>
         </Accordion.Content>
       </Accordion.Panel>
     </Accordion>
