@@ -130,7 +130,7 @@ export default function Nav() {
         >
           <ul className={`font-medium flex flex-col p-4 md:p-0 border border-gray-100 rounded-lg bg-${theme === 'dark' ? 'black' : 'white'} md:flex-row md:space-x-60 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-${theme === 'dark' ? 'black' : 'white'} dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700`}>
             <li>
-              <a href="/" className={`block py-2 px-3 text-${theme === 'dark' ? 'white' : 'black'} hover:bg-blue-700 rounded md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500`} >Home</a>
+              <a href="/" className={`block py-1 px-3 text-${theme === 'dark' ? 'white' : 'black'} hover:bg-blue-700 rounded md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500`} >Home</a>
             </li>
             <li>
               <a href="/about" className={`block py-2 px-3 text-${theme === 'dark' ? 'white' : 'black'} rounded hover:bg-blue-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}>About</a>
