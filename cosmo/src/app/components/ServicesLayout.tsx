@@ -9,6 +9,7 @@ export default function ServicesLayout() {
       <Accordion.Panel>
         <Accordion.Title>Hair Cut</Accordion.Title>
         <Accordion.Content>
+          <div>
           <p className="mb-2 text-gray-500 dark:text-gray-400">
           <h2>Women's Haircuts:</h2>
             <ul>
@@ -27,6 +28,7 @@ export default function ServicesLayout() {
                 <li>Classic Cut: Timeless and versatile, suitable for various hair types and face shapes.</li>
               </ul>
           </p>
+          </div>
         </Accordion.Content>
       </Accordion.Panel>
       <Accordion.Panel>

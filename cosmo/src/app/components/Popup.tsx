@@ -1,32 +1,49 @@
 
 'use client';
 
-import { Button, Modal } from 'flowbite-react';
+import { Button, Label, Modal, TextInput } from 'flowbite-react';
 import { useState } from 'react';
 
 export default function Popup() {
   const [openModal, setOpenModal] = useState(false);
+  const [email, setEmail] = useState('');
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    console.log('Email:', email);
+    setOpenModal(false);
+  };
 
   return (
     <>
-      <Button onClick={() => setOpenModal(true)}>Toggle modal</Button>
+      <Button onClick={() => setOpenModal(true)}>Click me</Button>
       <Modal show={openModal} onClose={() => setOpenModal(false)}>
-        <Modal.Header>Terms of Service</Modal.Header>
+        <Modal.Header> Want to receive weekly updates? </Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
             <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-              With less than a month to go before the European Union enacts new consumer privacy laws for its citizens,
-              companies around the world are updating their terms of service agreements to comply.
+            🌟 Stay in the loop with our latest beauty tips, exclusive offers, and exciting events! 
+            Sign up now for our weekly newsletter and unlock access to expert skincare advice, trending makeup looks, 
+            and special promotions tailored just for you. 
+            Do not miss out on the chance to elevate your beauty routine and pamper yourself like never before. 
+            Join our community of beauty enthusiasts today!
             </p>
-            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-              The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant
-              to ensure a common set of data rights in the European Union. It requires organizations to notify users as
-              soon as possible of high-risk data breaches that could personally affect them.
-            </p>
+            <div>
+              <div className="mb-2 block">
+                <Label htmlFor="email" value="Your email" />
+              </div>
+              <TextInput
+                id="email"
+                placeholder="name@gmail.com"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+                required
+              />
+            </div>
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={() => setOpenModal(false)}>I accept</Button>
+          <Button onClick={() => handleSubmit(event)}>Submit</Button>
           <Button color="gray" onClick={() => setOpenModal(false)}>
             Decline
           </Button>
