@@ -7,69 +7,56 @@ export default function ServicesLayout() {
   return (
     <Accordion collapseAll>
       <Accordion.Panel>
-        <Accordion.Title>What is Flowbite?</Accordion.Title>
+        <Accordion.Title>Hair Cut</Accordion.Title>
         <Accordion.Content>
           <p className="mb-2 text-gray-500 dark:text-gray-400">
-            Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons,
-            dropdowns, modals, navbars, and more.
-          </p>
-          <p className="text-gray-500 dark:text-gray-400">
-            Check out this guide to learn how to&nbsp;
-            <a
-              href="https://flowbite.com/docs/getting-started/introduction/"
-              className="text-cyan-600 hover:underline dark:text-cyan-500"
-            >
-              get started&nbsp;
-            </a>
-            and start developing websites even faster with components on top of Tailwind CSS.
+          <h2>Women's Haircuts:</h2>
+            <ul>
+              <li>Layered Cut: A classic style that adds dimension and movement to your hair.</li>
+              <li>Bob Cut: A versatile and timeless style that can be customized to suit your face shape.</li>
+              <li>Pixie Cut: Short and stylish, perfect for those who want a low-maintenance look.</li>
+              <li>Bangs Trim: Refresh your look with a quick trim for your fringe.</li>
+              <li>Long Hair Trim: Maintain the length of your long hair with a professional trim.</li>
+            </ul>
+            <h2>Men's Haircuts:</h2>
+              <ul>
+                <li>Crew Cut: A short and neat style that is easy to maintain.</li>
+                <li>Undercut: Trendy and modern, with longer hair on top and short sides.</li>
+                <li>Fade Cut: Gradually fades from short to longer hair, creating a clean and sharp look.</li>
+                <li>Buzz Cut: A short, uniform length all over the head for a low-maintenance style.</li>
+                <li>Classic Cut: Timeless and versatile, suitable for various hair types and face shapes.</li>
+              </ul>
           </p>
         </Accordion.Content>
       </Accordion.Panel>
       <Accordion.Panel>
-        <Accordion.Title>Is there a Figma file available?</Accordion.Title>
+        <Accordion.Title>Nails </Accordion.Title>
         <Accordion.Content>
           <p className="mb-2 text-gray-500 dark:text-gray-400">
-            Flowbite is first conceptualized and designed using the Figma software so everything you see in the library
-            has a design equivalent in our Figma file.
-          </p>
-          <p className="text-gray-500 dark:text-gray-400">
-            Check out the
-            <a href="https://flowbite.com/figma/" className="text-cyan-600 hover:underline dark:text-cyan-500">
-              Figma design system
-            </a>
-            based on the utility classes from Tailwind CSS and components from Flowbite.
+          <h2>Basic Services:</h2>
+            <ul>
+              <li>Manicure: Includes nail shaping, cuticle care, hand massage, and polish application.</li>
+              <li>Pedicure: Includes foot soak, nail shaping, cuticle care, callus removal, foot massage, and polish application.</li>
+              <li>Polish Change (Hands or Feet): Includes nail shaping and polish application.</li>
+            </ul>
+            <h2>Specialty Services:</h2>
+              <ul>
+                <li>Gel Manicure: Long-lasting polish that resists chipping for up to two weeks.</li>
+                <li>Gel Pedicure: Extend the life of your pedicure with gel polish.</li>
+                <li>Acrylic Full Set: Sculpted or tips applied to enhance nail length and strength.</li>
+                <li>Acrylic Fill: Maintenance for acrylic nails, includes shaping and polish.</li>
+                <li>Dip Powder Manicure: Durable and chip-resistant manicure with a variety of colors and designs.</li>
+                <li>Nail Art (Per Nail): Custom nail designs, glitter, rhinestones, and more.</li>
+              </ul>
           </p>
         </Accordion.Content>
       </Accordion.Panel>
       <Accordion.Panel>
-        <Accordion.Title>What are the differences between Flowbite and Tailwind UI?</Accordion.Title>
+        <Accordion.Title>other</Accordion.Title>
         <Accordion.Content>
           <p className="mb-2 text-gray-500 dark:text-gray-400">
-            The main difference is that the core components from Flowbite are open source under the MIT license, whereas
-            Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone
-            components, whereas Tailwind UI offers sections of pages.
+           
           </p>
-          <p className="mb-2 text-gray-500 dark:text-gray-400">
-            However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no
-            technical reason stopping you from using the best of two worlds.
-          </p>
-          <p className="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-          <ul className="list-disc pl-5 text-gray-500 dark:text-gray-400">
-            <li>
-              <a href="https://flowbite.com/pro/" className="text-cyan-600 hover:underline dark:text-cyan-500">
-                Flowbite Pro
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://tailwindui.com/"
-                rel="nofollow"
-                className="text-cyan-600 hover:underline dark:text-cyan-500"
-              >
-                Tailwind UI
-              </a>
-            </li>
-          </ul>
         </Accordion.Content>
       </Accordion.Panel>
     </Accordion>
