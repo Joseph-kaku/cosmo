@@ -3,14 +3,19 @@
 
 import { Button, Label, Modal, TextInput } from 'flowbite-react';
 import { useState } from 'react';
+import {doc , setDoc} from 'firebase/firestore';
+import { db } from '../../../../firebaseconfig';
 
 export default function Popup() {
   const [openModal, setOpenModal] = useState(false);
   const [email, setEmail] = useState('');
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     console.log('Email:', email);
+    await setDoc(doc(db, 'users', email), {
+      email: email
+    })
     setOpenModal(false);
   };
 
