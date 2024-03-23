@@ -2,10 +2,25 @@
 
 'use client';
 
+import { doc, setDoc } from 'firebase/firestore';
 import { Accordion } from 'flowbite-react';
 import { Label, Textarea, Button } from 'flowbite-react';
+import { useState } from 'react';
+import { db } from '../../../firebaseconfig';
 
 export default function ServicesLayout() {
+
+  const [review, setReview] = useState<string>('');
+  const rndint = (Math.floor(Math.random() * 6) + 1).toString();
+  const reviewsubmit =  async () => {
+    console.log(review)
+    await setDoc(doc(db, 'review', rndint),{
+      review: review
+    })
+  }
+
+  
+
   return (
     <div>
     <div className='mb-20'>
@@ -72,8 +87,8 @@ export default function ServicesLayout() {
     <div>
       <h2 className='flex justify-center items-center text-stone-50' >Customer Review</h2>
     <Label>Your Review</Label>
-    <Textarea id="comment" placeholder="Leave a review..." required rows={4} className="max-w-96 mb-5" />
-    <Button type="submit">Submit</Button>
+    <Textarea id="comment" placeholder="Leave a review..." required rows={4} className="max-w-96 mb-5" onChange={(event)=> setReview(event.target.value)} />
+    <Button type="submit" onClick={()=> reviewsubmit()}>Submit</Button>
     </div>
 
     </div>
