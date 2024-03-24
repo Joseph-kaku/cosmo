@@ -7,6 +7,7 @@ import { Accordion } from 'flowbite-react';
 import { Label, Textarea, Button } from 'flowbite-react';
 import { useState, useEffect } from 'react';
 import { db } from '../../../firebaseconfig';
+import ReviewCard from './ReviewCard';
 
 export default function ServicesLayout() {
 
@@ -24,6 +25,7 @@ export default function ServicesLayout() {
     })
     console.log('Review submitted successfully!');
     fetchData();
+    setReview('');
     }catch(error){
       console.log(error)
     }
@@ -111,14 +113,16 @@ useEffect(() => {
     <div>
       <h2 className='flex justify-center items-center text-stone-50' >Customer Review</h2>
     <Label>Your Review</Label>
-    <Textarea id="comment" placeholder="Leave a review..." required rows={4} className="max-w-96 mb-5" onChange={(event)=> setReview(event.target.value)} />
+    <Textarea id="comment" placeholder="Leave a review..." required rows={4} value={review} className="max-w-96 mb-5" onChange={(event)=> setReview(event.target.value)} />
     <Button type="submit" onClick={()=> reviewsubmit()}>Submit</Button>
     </div>
-    <ul>
-      {reviewList.map((reviewItem) => (
-          <li key={reviewItem.id}>{reviewItem.review}</li>
-      ))}
-    </ul>
+      <div  className="flex-container flex flex-wrap p-2">
+        {reviewList.map((reviewItem) => (
+            <ReviewCard key={reviewItem.id} review={reviewItem.review}></ReviewCard>
+        ))}
+
+      </div>
     </div>
+    
   );
 }
