@@ -2,22 +2,46 @@
 
 'use client';
 
-import { doc, setDoc } from 'firebase/firestore';
+import { collection, doc, getDocs, setDoc } from 'firebase/firestore';
 import { Accordion } from 'flowbite-react';
 import { Label, Textarea, Button } from 'flowbite-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { db } from '../../../firebaseconfig';
 
 export default function ServicesLayout() {
 
+
+  const [reviewList, setReviewsList] = useState<{ id: string; review: string }[]>([]);
+
   const [review, setReview] = useState<string>('');
-  const rndint = (Math.floor(Math.random() * 6) + 1).toString();
+ 
   const reviewsubmit =  async () => {
+    try{
+    const rndint = (Math.floor(Math.random() * 10000000000000) + 1).toString();
     console.log(review)
     await setDoc(doc(db, 'review', rndint),{
       review: review
     })
+    console.log('Review submitted successfully!');
+    fetchData();
+    }catch(error){
+      console.log(error)
+    }
   }
+async function fetchData() {
+  try {
+    const querySnapshot = await getDocs(collection(db, 'review'));
+    const reviewsData = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    setReviewsList(reviewsData);
+} catch (error) {
+    console.error('Error fetching reviews:', error);
+}
+}
+useEffect(() => {
+  fetchData();
+}, []);
+
+  
 
   
 
@@ -90,7 +114,11 @@ export default function ServicesLayout() {
     <Textarea id="comment" placeholder="Leave a review..." required rows={4} className="max-w-96 mb-5" onChange={(event)=> setReview(event.target.value)} />
     <Button type="submit" onClick={()=> reviewsubmit()}>Submit</Button>
     </div>
-
+    <ul>
+      {reviewList.map((reviewItem) => (
+          <li key={reviewItem.id}>{reviewItem.review}</li>
+      ))}
+    </ul>
     </div>
   );
 }
