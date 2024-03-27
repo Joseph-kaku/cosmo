@@ -1,6 +1,10 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import { LayoutGrid } from "./ui/layout-grid";
+import  test1   from "../../../public/test5.png";
+import  test2   from "../../../public/test7.png";
+import  test3   from "../../../public/test8.jpeg";
+import  test4   from "../../../public/test1.png";
 
 export default function Galpage() {
   return (
@@ -67,79 +71,28 @@ const cards = [
     content: <SkeletonOne />,
     className: "md:col-span-2",
     thumbnail:
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg",
+    test4,
   },
   {
     id: 2,
     content: <SkeletonTwo />,
     className: "col-span-1",
     thumbnail:
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg",
+    test1,
   },
   {
     id: 3,
     content: <SkeletonThree />,
     className: "col-span-1",
     thumbnail:
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg",
+    test2,
   },
   {
     id: 4,
     content: <SkeletonFour />,
     className: "md:col-span-2",
     thumbnail:
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg",
+    test3,
   },
 ];
 
-
-
-
-
-// 'use client'
-
-
-
-// export default function Gallery() {
-//     return (
-//         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-//         <div>
-//             <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt=""/>
-//         </div>
-//         <div>
-//             <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt=""/>
-//         </div>
-//         <div>
-//             <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt=""/>
-//         </div>
-//         <div>
-//             <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt=""/>
-//         </div>
-//         <div>
-//             <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt=""/>
-//         </div>
-//         <div>
-//             <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg" alt=""/>
-//         </div>
-//         <div>
-//             <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg" alt=""/>
-//         </div>
-//         <div>
-//             <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt=""/>
-//         </div>
-//         <div>
-//             <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg" alt=""/>
-//         </div>
-//         <div>
-//             <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg" alt=""/>
-//         </div>
-//         <div>
-//             <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg" alt=""/>
-//         </div>
-//         <div>
-//             <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg" alt=""/>
-//         </div>
-        
-//         </div>
-//     )
-//     }
