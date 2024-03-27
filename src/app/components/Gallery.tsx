@@ -1,10 +1,10 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import { LayoutGrid } from "./ui/layout-grid";
-import  test1   from "../../../public/test5.png";
-import  test2   from "../../../public/test7.png";
-import  test3   from "../../../public/test8.jpeg";
-import  test4   from "../../../public/test1.png";
+import  test1   from "../../../public/color.png";
+import  test2   from "../../../public/mencut.png";
+import  test3   from "../../../public/trim.jpeg";
+import  test4   from "../../../public/recolor.png";
 
 export default function Galpage() {
   return (
