@@ -6,7 +6,7 @@ import Popup from "./components/Popup";
 
 export default function Home() {
   return (
-      <div className="h-screen w-screen relative ">
+      <div className="h-screen w-screen relative">
       <Carousel>
 
         <Picture pic='https://flowbite.com/docs/images/carousel/carousel-1.svg'/>
