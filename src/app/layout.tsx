@@ -5,6 +5,7 @@ import "./globals.css";
 import { Footer } from "flowbite-react";
 import Foot from "./components/Footer";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -20,8 +21,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <Nav />
-        {children}      
+      <Nav />      
+        {children}
       <Foot />
       </body>
     </html>

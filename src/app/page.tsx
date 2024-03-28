@@ -12,7 +12,6 @@ export default function Home() {
         <Picture pic='https://flowbite.com/docs/images/carousel/carousel-1.svg'/>
         <Picture pic='https://flowbite.com/docs/images/carousel/carousel-2.svg'/>
         <Picture pic='https://flowbite.com/docs/images/carousel/carousel-3.svg'/>
-        {/* <Button></Button> */}
       </Carousel>
       
     </div>
