@@ -4,6 +4,7 @@ import Nav from "./components/Nav";
 import "./globals.css";
 import { Footer } from "flowbite-react";
 import Foot from "./components/Footer";
+import { ThemeProvider } from "./components/ThemeProvider";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,7 +23,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
       <Nav />      
-        {children}
+      <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
       <Foot />
       </body>
     </html>

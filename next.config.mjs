@@ -2,6 +2,7 @@
 const nextConfig = {
     images: {
         domains: ['flowbite.s3.amazonaws.com'],
+        domains: ['images.unsplash.com'],
     }
 };
 
