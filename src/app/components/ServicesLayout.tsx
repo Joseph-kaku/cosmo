@@ -111,7 +111,7 @@ useEffect(() => {
     </div>
 
     <div>
-      <h2 className='flex justify-center items-center text-stone-50' >Customer Review</h2>
+      <h2 className='flex justify-center items-center text-stone-800 dark:text-stone-50' >Customer Review</h2>
     <Label>Your Review</Label>
     <Textarea id="comment" placeholder="Leave a review..." required rows={4} value={review} className="max-w-96 mb-5" onChange={(event)=> setReview(event.target.value)} />
     <Button type="submit" onClick={()=> reviewsubmit()}>Submit</Button>

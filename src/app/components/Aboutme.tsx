@@ -6,9 +6,9 @@ import { Rating } from 'flowbite-react'
 export default function Aboutme() {
     return (
         <div className="w-screen h-screen">
-            <h1 className="text-4xl flex justify-center mt-5">
+            {/* <h1 className="text-4xl flex justify-center mt-5">
                 About Me
-            </h1>
+            </h1> */}
             <div className="flex justify-center">
                 <img className="h-96 w-96 rounded-full mt-5" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt=""/>
             </div> 
