@@ -3,7 +3,7 @@ $bubble-border-radius: 17px;
 
 @mixin bot {
   background: #393e46;
-  color: #f7f7f7;
+  // color: #f7f7f7;
   align-self: flex-start;
 }
 
@@ -38,9 +38,10 @@ $bubble-border-radius: 17px;
   }
 
   .options {
-    background: white;
+    // background: white;
     display: flex;
     align-items: center;
+    padding-top: 10px;
 
     > div:first-child {
       font-size: 1.3em;

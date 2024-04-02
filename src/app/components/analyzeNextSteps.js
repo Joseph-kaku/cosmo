@@ -1,69 +1,72 @@
 export const analyzeNextSteps = (step, userResponse) => {
     return step === 0
       ? {
-          purpose: "specify field",
-          message: `Nice to meet you, ${userResponse}! It feels like I know you already. We have some job positions for you. Which of these call out to you?`,
-          options: ["Frontend", "Backend", "Full Stack"]
+          purpose: "specify service needed",
+          message: `Nice to meet you, ${userResponse}! What service are you looking for?`,
+          options: ["hair styling", "hair color", "skincare", "makeup", "haircut"]
         }
       : step === 1
       ? {
-          purpose: "specify experience",
+          purpose: "ask for details",
           message:
-            "That's cool! Could you describe your experience in that field?"
+            "Great! What details do you want to share with me? (i.e. hair color, hair length, etc.)",
         }
       : step === 2
       ? {
-          purpose: "specify projects",
+          purpose: "Day for service",
           message:
-            "Did you do any projects that you're proud of? Can you tell me more about them? (class projects are cool too...)"
+            "Awesome! What day of the week are you available? (i.e. Monday, Tuesday, etc.)",
+          options: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
         }
-      : step === 3
+      : step === 3 && ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"].includes(userResponse)
       ? {
-          purpose: "specify personality",
+          purpose: "specify time",
           message:
-            "Thanks for telling me that. Let's get personal... (just kidding). Could you tell me about yourself? How would you describe your personality?"
+            `Awesome! What time on ${userResponse} are you available? (i.e. 10:00 AM, 2:00 PM, etc.)`,
+          options: ["10:00 AM", "2:00 PM", "4:00 PM", "6:00 PM", "8:00 PM"]
         }
       : step === 4
       ? {
-          purpose: "prompt company info",
-          message: "Do you want me to explain what we do?",
-          options: ["Yeah sure!", "Meh, I'll pass"]
+          purpose: "location of service",
+          message: "Do you need directions to the salon?",
+          options: ["Yeah sure!", "I don't need directions."]
         }
       : step === 5
       ? userResponse === "Yeah sure!"
         ? {
-            purpose: "tell company info",
-            message: "Oh yay! This is what we do...",
+            purpose: "give location",
+            message: "We are located at 415 W 6th S, Rexburg ID 83440.",
             options: ["Keep going."]
           }
         : {
-            purpose: "not tell company info",
-            message: "Aww... Well I guess you know what we do already.",
+            purpose: "do not give location",
+            message: "You can also find out location on the website.",
             options: ["Keep going."]
           }
       : step === 6
       ? {
-          purpose: "specify reason to work",
+          purpose: "specify any more details",
           message:
-            "Now that you know what we do, how about you tell me why you want to work for us?"
+            "Awesome! Any more details you want to share with me?",
         }
       : step === 7
       ? {
-          purpose: "specify hobbies",
+          purpose: "specify if they want to be a recurring customer",
           message:
-            "Alright, noted! One last question before we finish, besides coding/working, what do you do?"
+            "Alright, noted! One last question before we finish, would you like to make a return appointment?",
+          options: ["Yes", "No"]
         }
       : step === 8
       ? {
-          purpose: "specify email",
+          purpose: "set up return appointment",
           message:
-            "That sounds awesome! Right, it looks like we've got your application set. I would need your email to contact you if you're a good fit for this role!"
+            "enter your email address to set up your return appointment. If not ignore this message.",
         }
       : step === 9
       ? {
           purpose: "end",
           message:
-            "Thank you so much for spending time chatting with me. Good luck with the application process! I hope we can meet soon. Bye!"
+            "Thank you so much for spending time chatting with me. Have a great day! See you soon!",
         }
       : {
           purpose: "bye",
