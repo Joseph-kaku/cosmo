@@ -4,6 +4,7 @@ import { Card, TextInput } from 'flowbite-react';
 import { Label, Textarea, Button } from 'flowbite-react';
 import Image from 'next/image';
 import self from '../../../public/selfpotrait.jpeg';
+import liz from '../../../public/liz.jpg';
 import React, { useRef, FormEvent } from 'react';
 import emailjs from '@emailjs/browser';
 
@@ -38,7 +39,7 @@ export default function ContactUs (){
                     <Image
                     alt="Bonnie image"
                     height="96"
-                    src={self}
+                    src={liz}
                     width="96"
                     className="mb-3 rounded-full shadow-lg"
                     />
