@@ -13,7 +13,7 @@ export default function Aboutme() {
                 <img className="h-96 w-96 rounded-full mt-5" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt=""/>
             </div> 
             <div className="flex justify-center ml-40 mr-40">
-                <Blockquote className='mt-5 text-stone-100 text-lg'>
+                <Blockquote className='mt-5 text-lg dark:text-stone-100'>
                 " Welcome to [Your Name]'s Beauty Haven!
                 I'm [Your Name], your dedicated cosmetologist, here to bring out your natural beauty and boost your confidence. 
                 With [X] years of experience and a passion for creativity, 
