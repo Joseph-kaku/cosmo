@@ -12,7 +12,7 @@ import ReviewCard from './ReviewCard';
 export default function ServicesLayout() {
 
 
-  const [reviewList, setReviewsList] = useState<{ id: string; review: string }[]>([]);
+  const [reviewList, setReviewsList] = useState<any>([]);
 
   const [review, setReview] = useState<string>('');
  
@@ -117,7 +117,7 @@ useEffect(() => {
     <Button type="submit" onClick={()=> reviewsubmit()}>Submit</Button>
     </div>
       <div  className="flex-container flex flex-wrap p-2">
-        {reviewList.map((reviewItem) => (
+        {reviewList.map((reviewItem: any) => (
             <ReviewCard key={reviewItem.id} review={reviewItem.review}></ReviewCard>
         ))}
 

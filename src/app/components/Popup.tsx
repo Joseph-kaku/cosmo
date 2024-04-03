@@ -48,7 +48,7 @@ export default function Popup() {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={() => handleSubmit(event)}>Submit</Button>
+          <Button onClick={() => handleSubmit}>Submit</Button>
           <Button color="gray" onClick={() => setOpenModal(false)}>
             Decline
           </Button>
