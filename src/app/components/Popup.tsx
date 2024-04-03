@@ -21,7 +21,7 @@ export default function Popup() {
 
   return (
     <>
-      <Button onClick={() => setOpenModal(true)} className='bg-transparent'>Click me</Button>
+      <Button onClick={() => setOpenModal(true)}>Click me</Button>
       <Modal show={openModal} onClose={() => setOpenModal(false)}>
         <Modal.Header> Want to receive weekly updates? </Modal.Header>
         <Modal.Body>
