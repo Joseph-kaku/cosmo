@@ -116,12 +116,12 @@ useEffect(() => {
     <Textarea id="comment" placeholder="Leave a review..." required rows={4} value={review} className="max-w-96 mb-5" onChange={(event)=> setReview(event.target.value)} />
     <Button type="submit" onClick={()=> reviewsubmit()}>Submit</Button>
     </div>
-      <div  className="flex-container flex flex-wrap p-2">
-        {reviewList.map((reviewItem: any) => (
-            <ReviewCard key={reviewItem.id} review={reviewItem.review}></ReviewCard>
-        ))}
+    <div className="flex flex-wrap p-2 max-h-[calc(100vh - 200px)] overflow-none">
+  {reviewList.map((reviewItem: any) => (
+    <ReviewCard key={reviewItem.id} review={reviewItem.review}></ReviewCard>
+  ))}
+</div>
 
-      </div>
     </div>
     
   );

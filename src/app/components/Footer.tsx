@@ -15,7 +15,7 @@ export default function Foot() {
   return (
     <Footer container className="rounded-none">
       <Footer.Copyright href="#" by="Gilber & Joseph™" year={2022} />
-      <Footer.LinkGroup>
+      <Footer.LinkGroup className="gap-4">
         <Popup />
         <Button onClick={handleToggleChatbot}>QA</Button>
       </Footer.LinkGroup>

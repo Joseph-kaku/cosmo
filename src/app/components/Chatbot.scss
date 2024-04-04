@@ -33,8 +33,9 @@
             background: #e5dfdf;
             color: #393e46;
             border-style: none;
-            @include form-component-style;
-
+            padding: 1.5em;
+            border-radius: 50px;
+            font-size: 1em;
             &:hover {
                 opacity: 0.8;
                 cursor: pointer;
