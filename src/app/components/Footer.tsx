@@ -17,7 +17,7 @@ export default function Foot() {
       <Footer.Copyright href="#" by="Gilber & Joseph™" year={2022} />
       <Footer.LinkGroup className="gap-4">
         <Popup />
-        <Button onClick={handleToggleChatbot}>QA</Button>
+        <Button onClick={handleToggleChatbot}> Chat </Button>
       </Footer.LinkGroup>
       {showChatbot && <Chatbot />}
     </Footer>
